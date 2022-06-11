@@ -1,2 +1,2 @@
 # avocadoLeafs
-A proyect to automate sickness photo detection in avocado tree's leafs.
+This proyect consist of several files, documentation and scripts related to avocado leaf classification. 
