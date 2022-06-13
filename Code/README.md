@@ -25,8 +25,13 @@ Finally We tried to create a custom instance segmentation label assist model wit
 ## Simpler models generalize better with less data
 As we have stated we had a hard time training and also labeling with the instance segmentation technique, this is a general problem of this technique and why it isn't as common, in general it needs a high cost cost for labeling and a big quantity of data, thus we have to correct this direction. *there wasn't a very strong reason for having precise bounding polygons of our leafs*, we wont blame ourselves too hards as this emerged from disconnected collaboration and trying to tailor a cancer detection model to our problem. We will try to fix the first problem with a tool like Trello and happily know that a detectron model can work with bounding boxes too.
 
+## Data set cleaning 
+
+After another inspection to the we confirmed that not only there was a lot of duplicates in the original data set passing from 768 images to 616, but there was also a lot of rotations so we got to a final 533 with this in mind we got a more critical eye about possible leakage between classes and also data semi duplicates, the problems is if this little variations can be memorized in the training set but are also present in the validation and test set, we will get a very overfitted model.
+
 # Next Steps
 
 * Switch from the instance segmentation model to box detection and test it on the complete data set
 * use open cv or such to extract a given box segment from an image and run classification on it
 * continue on consolidation of the notebook, data and roadmap
+* clean more the dataset
