@@ -27,8 +27,7 @@ As we have stated we had a hard time training and also labeling with the instanc
 
 ## Data set cleaning 
 
-After another inspection to the we confirmed that not only there was a lot of duplicates in the original data set passing from 768 images to 616, but there was also a lot of rotations so we got to a final 533 with this in mind we got a more critical eye about possible leakage between classes and also data semi duplicates, the problems is if this little variations can be memorized in the training set but are also present in the validation and test set, we will get a very overfitted model.
-
+After another inspection to the we confirmed that not only there was a lot of duplicates in the original data set passing from 768 images to 616, but there was also a lot of rotations so we got to a final 533 with this in mind we got a more critical eye about possible leakage between classes and also data semi duplicates, having so much rotations we are assured the initial model would have reported a bigger accuracy than what was fair on validation and test sets by memorizing data (somewhere around 60 rotated or same specimen images should have been leaked). This realization ensures the importance of data cleanup and validation concepts to be exposed to anyone intervening in a neural network project.
 # Next Steps
 
 * Switch from the instance segmentation model to box detection and test it on the complete data set
